@@ -5,7 +5,7 @@ Created on Mon Aug  9 12:38:01 2021
 @author: ngothimai
 
 """
-
+import datetime
 from pathlib import Path
 import sys
 # import os
@@ -36,7 +36,11 @@ def run_refresh(f_path: Path, f_name: str) -> list:
     
     wb.RefreshAll()
     excel.CalculateUntilAsyncQueriesDone()
-    wb.SaveAs(r'W:\OfficeShare\15.Product development\01. WEEKLY REPORT TO GĐK\Lead Pool and Funnel\Report\Report Leadgen RF file - store for ppt_TOPUPCOVID_v1.xlsx')
+    
+    bkTime = datetime.datetime.now().strftime('%Y-%m-%d')
+    newFile = r'W:\OfficeShare\15.Product development\01. WEEKLY REPORT TO GĐK\Lead Pool and Funnel\Report\Report Leadgen RF file - store for ppt_TOPUPCOVID_v1'+bkTime+".xlsx"
+    
+    wb.SaveAs(newFile)
     wb.Close(False)
     
 
