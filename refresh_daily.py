@@ -36,9 +36,7 @@ def run_refresh(f_path: Path, f_name: str) -> list:
     
     wb.RefreshAll()
     excel.CalculateUntilAsyncQueriesDone()
-    wb1= wb.SaveAs('W:\OfficeShare\15.Product development\01. WEEKLY REPORT TO GĐK\Lead Pool and Funnel\Report\Report Leadgen RF file - store for ppt_TOPUPCOVID_v1.xlsx')
-    wb1.Save()
-    wb1.Close(True)
+    wb.SaveAs(r'W:\OfficeShare\15.Product development\01. WEEKLY REPORT TO GĐK\Lead Pool and Funnel\Report\Report Leadgen RF file - store for ppt_TOPUPCOVID_v1.xlsx')
     wb.Close(False)
     
 
